@@ -53,7 +53,7 @@ jobs:
           curl https://storage.googleapis.com/git-repo-downloads/repo -o ~/bin/repo
           chmod a+x ~/bin/repo
           export PATH=~/bin:$PATH
-          echo "[Repo] Manifest generate
+          echo "[Repo] Manifest generate"
           repo init -u https://github.com/Toad114514/risingos -b sixteen --git-lfs
           echo "[Manifest] Add Device Tree (Teamslow/device_oneplus_CPH2487)"
           mkdir -p .repo/local_manifests
