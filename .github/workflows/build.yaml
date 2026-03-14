@@ -74,7 +74,7 @@ jobs:
         run: |
           echo "[Repo] Start to Sync..."
           export PATH=~/bin:$PATH
-          repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j4 || true
+          repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j4
           
       - name: Setup
         run: |
@@ -102,7 +102,7 @@ jobs:
           export USE_CCACHE=1
           lunch rising_CPH2487-userdebug
           if command -v riseup &> /dev/null; then
-            riseup CPH2487 ${{ github.event.inputs.build_type || 'userdebug' }}
+            riseup CPH2487 userdebug
           else
             mka -j$(nproc --all) bacon
           fi
