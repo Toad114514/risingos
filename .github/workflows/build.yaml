@@ -1,0 +1,21 @@
+name: try to Build RisingOS Revived
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install dependencies
+        run: |
+          # Your build dependencies here
+      - name: Build
+        run: |
+          # Your build commands here
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: ./build/
