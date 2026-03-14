@@ -42,6 +42,9 @@ jobs:
             xsltproc \
             zip \
             zlib1g-dev
+      - name: Tips 提示
+        run: |
+          echo "此 Action 构建的刷机包只能给 OnePlus 11R/Ace2使用！以及这是个完全就是我无聊想自己随便乱78搞的东西！！😡"
       - name: Set up git
         run: |
           git config --global user.email "build@risingos.dev"
@@ -113,6 +116,5 @@ jobs:
           name: risingos-CPH2487-${{ github.run_id }}
           path: |
             ~/risingos-build/out/target/product/CPH2487/*.zip
-            ~/risingos-build/build_info.txt
           retention-days: 30
           if-no-files-found: warn
