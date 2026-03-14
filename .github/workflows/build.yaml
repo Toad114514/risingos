@@ -45,6 +45,7 @@ jobs:
       - name: Tips 提示
         run: |
           echo "此 Action 构建的刷机包只能给 OnePlus 11R/Ace2使用！以及这是个完全就是我无聊想自己随便乱78搞的东西！！😡"
+          echo "固定生成 Vanilla userdebug 带Gapps"
       - name: Set up git
         run: |
           git config --global user.email "build@risingos.dev"
